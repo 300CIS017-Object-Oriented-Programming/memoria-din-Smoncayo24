@@ -119,7 +119,10 @@ void menu(Administracion &administracionMenu)
 
 int main()
 {
-
+    int *p = new int; // Se reserva memoria en el heap para un entero
+    *p = 42; // Se asigna un valor
+    cout << *p << endl; // Se accede al valor almacenado
+    delete p; // Se libera la memoria
     Administracion administracion; // Instanciado con el stack
     menu(administracion);
     return 0;
